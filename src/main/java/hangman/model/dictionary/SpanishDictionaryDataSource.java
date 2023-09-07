@@ -9,17 +9,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
  * @author 2106913
  */
 public class SpanishDictionaryDataSource extends HangmanDictionary {
 
     static private String words[] = {
-        "GENERAL",
-        "PRESIDENTE",
-        "HOMBRE",
-        "SEÑOR",
-        "PROGRAMA"
+            "GENERAL",
+            "PRESIDENTE",
+            "HOMBRE",
+            "SEÑOR",
+            "PROGRAMA"
     };
 
     public SpanishDictionaryDataSource() {

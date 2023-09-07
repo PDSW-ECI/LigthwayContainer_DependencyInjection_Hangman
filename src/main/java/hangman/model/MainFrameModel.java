@@ -5,30 +5,30 @@
  */
 package hangman.model;
 
-import javax.swing.JComponent;
+import javax.swing.*;
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 /**
- *
  * @author Omar
  */
-public class MainFrameModel extends FrameModel{
-    
-    public MainFrameModel(){
+public class MainFrameModel extends FrameModel {
+
+    public MainFrameModel() {
         this.title = "Default Title";
         this.windowWidth = 600;
         this.windowHeight = 400;
         this.positionReference = null;
         this.actionOnClose = EXIT_ON_CLOSE;
     }
-    
-    public MainFrameModel(String title,int windowWidth,int windowHeight,
-            JComponent positionReference,int actionOnClose){
+
+    public MainFrameModel(String title, int windowWidth, int windowHeight,
+                          JComponent positionReference, int actionOnClose) {
         this.title = title;
         this.windowWidth = windowWidth;
         this.windowHeight = windowHeight;
         this.positionReference = positionReference;
         this.actionOnClose = actionOnClose;
-        
+
     }
 }

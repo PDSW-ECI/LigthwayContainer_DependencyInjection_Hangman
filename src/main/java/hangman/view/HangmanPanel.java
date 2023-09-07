@@ -5,20 +5,22 @@
  */
 package hangman.view;
 
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
- *
  * @author 2106913
  */
-public abstract class HangmanPanel extends JPanel{
-     @Override
-     public void paint(Graphics g){
-         super.paint(g);
-     };
-     
-     
-     public abstract void incrementIncorrectGuesses();
-     public abstract void setIncorrectGuesses(int incorrectGuesses);
+public abstract class HangmanPanel extends JPanel {
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+    }
+
+    ;
+
+
+    public abstract void incrementIncorrectGuesses();
+
+    public abstract void setIncorrectGuesses(int incorrectGuesses);
 }

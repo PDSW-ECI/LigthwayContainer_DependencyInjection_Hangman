@@ -6,15 +6,19 @@
 package hangman.model;
 
 /**
- *
  * @author 2106913
  */
 public interface Language {
-    
+
     public String[] getFunctionControllerNames();
+
     public String getPointsNameLabel();
+
     public String getHangmanLabel();
+
     public String getFinalScorelabel();
+
     public String[] getBackSkypeButtonLabel();
+
     public String[] getAccesButton();
 }

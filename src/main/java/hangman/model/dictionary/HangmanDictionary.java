@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author 2106913
  */
 public abstract class HangmanDictionary {
@@ -43,7 +42,7 @@ public abstract class HangmanDictionary {
         this.availableWords = availableWords;
     }
 
-    public List<String> getAvailableWords(){
+    public List<String> getAvailableWords() {
         return availableWords;
     }
 

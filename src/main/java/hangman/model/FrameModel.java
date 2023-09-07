@@ -5,10 +5,9 @@
  */
 package hangman.model;
 
-import javax.swing.JComponent;
+import javax.swing.*;
 
 /**
- *
  * @author Omar
  */
 abstract public class FrameModel {
@@ -17,7 +16,7 @@ abstract public class FrameModel {
     public int windowHeight;
     public JComponent positionReference;
     public int actionOnClose;
-    
+
     public String getTitle() {
         return title;
     }

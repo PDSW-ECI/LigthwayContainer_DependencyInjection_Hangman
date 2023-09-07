@@ -5,20 +5,20 @@
  */
 package hangman.model.dictionary;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 /**
- *
  * @author hcadavid Modified by fchaves
  */
 public class EnglishDictionaryDataSource extends HangmanDictionary {
 
     static private String words[] = {
-        "PLAYER",
-        "BALL",
-        "SOCCER",
-        "RAGE",
-        "GAME"
+            "PLAYER",
+            "BALL",
+            "SOCCER",
+            "RAGE",
+            "GAME"
     };
 
     public EnglishDictionaryDataSource() {

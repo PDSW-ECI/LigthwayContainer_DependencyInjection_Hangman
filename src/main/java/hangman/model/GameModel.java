@@ -1,21 +1,25 @@
 /***************************************************************
-* file: GameModel.java
-* author:   Christopher Santos
-*           Omar Rodriguez
-* class: CS 245 - Programming Graphical User Interfaces
-*
-* assignment: Swing Project v1.0
-* date last modified: 10/11/2016
-*
-* purpose: This is the model component for the game screen
-*
-****************************************************************/ 
+ * file: GameModel.java
+ * author:   Christopher Santos
+ *           Omar Rodriguez
+ * class: CS 245 - Programming Graphical User Interfaces
+ *
+ * assignment: Swing Project v1.0
+ * date last modified: 10/11/2016
+ *
+ * purpose: This is the model component for the game screen
+ *
+ ****************************************************************/
 package hangman.model;
 
 import hangman.model.dictionary.HangmanDictionary;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
 
 
 public class GameModel {
@@ -24,30 +28,29 @@ public class GameModel {
     private LocalDateTime dateTime;
     private int gameScore;
     private int[] lettersUsed;
-    
-    
+
+
     private HangmanDictionary dictionary;
-    
+
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
-    
-    
-   
-    public GameModel(HangmanDictionary dictionary){
+
+
+    public GameModel(HangmanDictionary dictionary) {
         //this.dictionary = new EnglishDictionaryDataSource();
-        this.dictionary=dictionary;
+        this.dictionary = dictionary;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
         gameScore = 100;
-        
+
     }
-    
+
     //method: reset
     //purpose: reset this game model for a new game
-    public void reset(){
+    public void reset() {
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
@@ -60,28 +63,28 @@ public class GameModel {
     public void setDateTime() {
         this.dateTime = LocalDateTime.now();
     }
-    
+
     //method: makeGuess
     //purpose: check if user guess is in string. Return a
     // list of positions if character is found in string
-    public ArrayList<Integer> makeGuess(String guess){
+    public ArrayList<Integer> makeGuess(String guess) {
         char guessChar = guess.charAt(0);
         ArrayList<Integer> positions = new ArrayList<>();
-        for(int i = 0; i < randomWordCharArray.length; i++){
-            if(randomWordCharArray[i] == guessChar){
+        for (int i = 0; i < randomWordCharArray.length; i++) {
+            if (randomWordCharArray[i] == guessChar) {
                 positions.add(i);
             }
         }
-        if(positions.size() == 0){
+        if (positions.size() == 0) {
             incorrectCount++;
             gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
         return positions;
-        
+
     }
-    
+
     //getDateTime
     //purpose: returns current displayed date/time
     public String getDateTime() {
@@ -89,16 +92,16 @@ public class GameModel {
         return dtf.format(dateTime);
     }
 
-    //setScore
-    //purpose: sets score value to points
-    public void setScore(int score) {
-        this.gameScore = score;
-    }
-    
     //getScore
     //purpose: returns current score value
     public int getScore() {
         return gameScore;
+    }
+
+    //setScore
+    //purpose: sets score value to points
+    public void setScore(int score) {
+        this.gameScore = score;
     }
 
     //name: selectRandomWord()
@@ -132,10 +135,10 @@ public class GameModel {
     public void setGameScore(int gameScore) {
         this.gameScore = gameScore;
     }
-    
+
     //method: getWordLength
     //purpose: return length of current word
-    public int getWordLength(){
+    public int getWordLength() {
         return randomWord.length();
     }
 

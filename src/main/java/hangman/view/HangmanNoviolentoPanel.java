@@ -1,21 +1,19 @@
-/** *************************************************************
+/**
+ * ************************************************************
  * file: HangmanPanel.java
- *           Omar Rodriguez
+ * Omar Rodriguez
  * class: CS 245 - Programming Graphical User Interfaces
- *
+ * <p>
  * assignment: Swing Project v1.0
  * date last modified: 10/11/2016
- *
+ * <p>
  * purpose: This is the view component for displaying a hangman game
- *
- *************************************************************** */
+ * <p>
+ * **************************************************************
+ */
 package hangman.view;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import javax.swing.JPanel;
+import java.awt.*;
 
 public class HangmanNoviolentoPanel extends HangmanPanel {
 
