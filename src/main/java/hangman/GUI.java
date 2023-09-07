@@ -57,8 +57,8 @@ public class GUI {
         this.hangmanPanel = hangmanPanel;
     }
 
-    //method: setup
-    //purpose: Create the various panels (game screens) for our game
+    // method: setup
+    // purpose: Create the various panels (game screens) for our game
     // and attach them to the main frame.
     private void setup() {
         mainFrameController = new MainFrameController(
@@ -113,9 +113,9 @@ public class GUI {
         gameoverController.setGameControllerReference(gameController);
     }
 
-    //method: setupAndStart
-    //purpose: call setup method, switch to first application screen (splash)
-    //then set the whole thing visible
+    // method: setupAndStart
+    // purpose: call setup method, switch to first application screen (splash)
+    // then set the whole thing visible
     private void setupAndStart() {
         javax.swing.SwingUtilities.invokeLater(() -> {
             setup();

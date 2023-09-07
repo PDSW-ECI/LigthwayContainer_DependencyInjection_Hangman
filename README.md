@@ -1,6 +1,6 @@
 ### Escuela Colombiana de Ingeniería
 
-### Procesos de Desarrollo de Software
+### Ciclo de Vida de Desarrollo de Software
 
 ### Desarrollo Dirigido por Pruebas + DIP + DI + Contenedores Livianos
 
@@ -35,7 +35,7 @@ puntuación, los cuales se describen a continuación:
 Lo anterior, se traduce en el siguiente modelo, donde se aplica el
 principio de inversión de dependencias:
 
-![](img/model.png)
+![imagen](img/model.png)
 
 ### Parte I
 
@@ -51,14 +51,13 @@ principio de inversión de dependencias:
 
 4. Haga commit de lo realizado hasta ahora. Desde la terminal:
 
-   ```bash		
-   git add .			
-   git commit -m "especificación métodos"
-   ```
+    ```sh		
+    git add .			
+    git commit -m "especificación métodos"
+    ```
 
 5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit y la versión del compilador
-   de Java a la versión 8 .
-
+   de Java a la versión 8.
 
 6. Teniendo en cuenta dichas especificaciones, en la clase donde se
    implementarán las pruebas (GameScoreTest), en los
@@ -71,17 +70,18 @@ principio de inversión de dependencias:
 
 8. Haga commit de lo realizado hasta ahora. Desde la terminal:
 
-   ```bash		
-   git add .			
-   git commit -m "implementación pruebas"
-   ```
+    ```sh		
+    git add .			
+    git commit -m "implementación pruebas"
+    ```
+
 9. Realice la implementación de los 'cascarones' realizados anteriormente.
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
 
 10. Al finalizar haga un nuevo commit:
 
-    ```bash		
+    ```sh		
     git add .			
     git commit -m "implementación del modelo"
     ```
@@ -89,9 +89,9 @@ principio de inversión de dependencias:
 11. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
     el comando de GIT para enviar los cambios:
 
-```bash	
-	git push <URL Repositorio>	
-```
+    ```sh
+    git push <URL Repositorio>	
+    ```
 
 ### Parte II
 
@@ -108,9 +108,9 @@ la inyección de las dependencias.
 
 Incorpore el Contenedor Liviano Guice dentro del proyecto:
 
-* Revise las dependencias necesarias en el pom.xml.
+* Revise las dependencias necesarias en el `pom.xml`.
 * Modifique la inyección de dependencias utilizando guice en lugar del
-  método fábrica..
+  método fábrica.
 * Configure la aplicación de manera que desde el programa SwingProject
   NO SE CONSTRUYA el Score directamente, sino a través de Guice, asi
   mismo como las otras dependencias que se están inyectando mediante
