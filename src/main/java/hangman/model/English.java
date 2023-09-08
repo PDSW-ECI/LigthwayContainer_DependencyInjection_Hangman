@@ -6,14 +6,13 @@
 package hangman.model;
 
 /**
- *
  * @author 2106913
  */
-public class English implements Language{
+public class English implements Language {
 
     @Override
     public String[] getFunctionControllerNames() {
-        return new String[]{"Play","HighScores","Crédits"};
+        return new String[]{"Play", "HighScores", "Crédits"};
     }
 
     @Override
@@ -28,17 +27,17 @@ public class English implements Language{
 
     @Override
     public String[] getBackSkypeButtonLabel() {
-        return new String[]{"Back","Skip"};
+        return new String[]{"Back", "Skip"};
     }
 
     @Override
     public String[] getAccesButton() {
-        return new String[]{"Game Over!","New Game","Main Menu"};
+        return new String[]{"Game Over!", "New Game", "Main Menu"};
     }
 
     @Override
     public String getFinalScorelabel() {
         return "Final Score: ";
     }
-    
+
 }

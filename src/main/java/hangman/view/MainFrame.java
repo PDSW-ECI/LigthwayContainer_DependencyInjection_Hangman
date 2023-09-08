@@ -5,27 +5,26 @@
  */
 package hangman.view;
 
-import java.awt.CardLayout;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
- *
  * @author Omar
  */
-public class MainFrame extends JFrame{
+public class MainFrame extends JFrame {
     private JPanel container;
-    public MainFrame(){
+
+    public MainFrame() {
         setTitle("PLACEHOLDER");
-        setSize(800,600);
+        setSize(800, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         container = new JPanel(new CardLayout());
         this.add(container);
     }
-    
-    public void addPanel(JPanel panel,String key){
-        container.add(panel,key);
+
+    public void addPanel(JPanel panel, String key) {
+        container.add(panel, key);
     }
 
     public JPanel getContainer() {
@@ -35,6 +34,6 @@ public class MainFrame extends JFrame{
     public void setContainer(JPanel container) {
         this.container = container;
     }
-    
-    
+
+
 }

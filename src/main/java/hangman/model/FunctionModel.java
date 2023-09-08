@@ -1,26 +1,26 @@
 /***************************************************************
-* file: FunctionModel.java
-* author: Omar Rodriguez
-* class: CS 245 - Programming Graphical User Interfaces
-*
-* assignment: Swing Project v1.0
-* date last modified: 10/11/2016
-*
-* purpose: This is the model that contains the business logic for the
-* function screen
-*
-****************************************************************/ 
+ * file: FunctionModel.java
+ * author: Omar Rodriguez
+ * class: CS 245 - Programming Graphical User Interfaces
+ *
+ * assignment: Swing Project v1.0
+ * date last modified: 10/11/2016
+ *
+ * purpose: This is the model that contains the business logic for the
+ * function screen
+ *
+ ****************************************************************/
 package hangman.model;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class FunctionModel {
     private Color backgroundColor;
     private String button1;
     private String button2;
     private String button3;
-    
-    public FunctionModel(Color bg,String btn1, String btn2, String btn3){
+
+    public FunctionModel(Color bg, String btn1, String btn2, String btn3) {
         backgroundColor = bg;
         button1 = btn1;
         button2 = btn2;
@@ -74,5 +74,5 @@ public class FunctionModel {
     public void setButton3(String button3) {
         this.button3 = button3;
     }
-    
+
 }

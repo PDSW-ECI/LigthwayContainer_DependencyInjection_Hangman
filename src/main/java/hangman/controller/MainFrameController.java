@@ -5,39 +5,39 @@
  */
 package hangman.controller;
 
-import java.awt.CardLayout;
-import javax.swing.JPanel;
 import hangman.model.MainFrameModel;
 import hangman.view.MainFrame;
 
+import javax.swing.*;
+import java.awt.*;
+
 
 /**
- *
  * @author Omar
  */
-public class MainFrameController{
+public class MainFrameController {
     private MainFrameModel model;
     private MainFrame frame;
-    
-    
-    public MainFrameController(MainFrameModel model,MainFrame frame){
+
+
+    public MainFrameController(MainFrameModel model, MainFrame frame) {
         this.model = model;
         this.frame = frame;
         setup();
     }
-    
-    private void setup(){
+
+    private void setup() {
         frame.setTitle(model.getTitle());
-        frame.setSize(model.getWindowWidth(),model.getWindowHeight());
+        frame.setSize(model.getWindowWidth(), model.getWindowHeight());
         frame.setLocationRelativeTo(model.getPositionReference());
         frame.setDefaultCloseOperation(model.getActionOnClose());
     }
-    
-    public void changeVisibleCard(String key){
-        ((CardLayout)frame.getContainer().getLayout()).show(frame.getContainer(),key);
+
+    public void changeVisibleCard(String key) {
+        ((CardLayout) frame.getContainer().getLayout()).show(frame.getContainer(), key);
     }
-    
-    public void addPanel(JPanel panel, String key){
+
+    public void addPanel(JPanel panel, String key) {
         frame.getContainer().add(panel, key);
     }
 
@@ -56,8 +56,8 @@ public class MainFrameController{
     public void setFrame(MainFrame frame) {
         this.frame = frame;
     }
-    
-    public void setWindowTitle(String newTitle){
+
+    public void setWindowTitle(String newTitle) {
         model.setTitle(newTitle);
         frame.setTitle(model.getTitle());
     }

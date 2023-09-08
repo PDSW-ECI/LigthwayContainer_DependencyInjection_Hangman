@@ -22,7 +22,6 @@ public class GUI {
             "Christopher Santos..00",
             "Jazmin Guerrero..00"};
 
-
     public static final String SPLASH_KEY = "splashscreen";
     public static final String FUNCTION_KEY = "functionscreen";
     public static final String HIGH_SCORE_KEY = "highscorescreen";
@@ -52,24 +51,24 @@ public class GUI {
 
     @Inject
     // Use Guice constructor
-    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel){
+    public GUI(Language language, HangmanDictionary dictionary, HangmanPanel hangmanPanel) {
         this.language = language;
-        this.dictionary= dictionary;
+        this.dictionary = dictionary;
         this.hangmanPanel = hangmanPanel;
     }
 
-    //method: setup
-    //purpose: Create the various panels (game screens) for our game
+    // method: setup
+    // purpose: Create the various panels (game screens) for our game
     // and attach them to the main frame.
-    private void setup(){
+    private void setup() {
         mainFrameController = new MainFrameController(
-                new MainFrameModel(PROJECT_NAME,600,400,null,EXIT_ON_CLOSE),
+                new MainFrameModel(PROJECT_NAME, 600, 400, null, EXIT_ON_CLOSE),
                 new MainFrame()
         );
 
         splashController = new SplashController(
                 new SplashPanel(),
-                new SplashModel(PROJECT_NAME,"REDS", Color.BLACK,3000),
+                new SplashModel(PROJECT_NAME, "REDS", Color.BLACK, 3000),
                 mainFrameController
         );
 
@@ -103,21 +102,21 @@ public class GUI {
                 mainFrameController
         );
 
-        mainFrameController.addPanel(splashController.getPanel(),SPLASH_KEY);
-        mainFrameController.addPanel(functionController.getPanel(),FUNCTION_KEY);
-        mainFrameController.addPanel(gameController.getPanel(),GAME_KEY);
-        mainFrameController.addPanel(creditsController.getPanel(),CREDITS_KEY);
-        mainFrameController.addPanel(gameoverController.getPanel(),GAME_OVER_KEY);
-        mainFrameController.addPanel(highScoreController.getPanel(),HIGH_SCORE_KEY);
+        mainFrameController.addPanel(splashController.getPanel(), SPLASH_KEY);
+        mainFrameController.addPanel(functionController.getPanel(), FUNCTION_KEY);
+        mainFrameController.addPanel(gameController.getPanel(), GAME_KEY);
+        mainFrameController.addPanel(creditsController.getPanel(), CREDITS_KEY);
+        mainFrameController.addPanel(gameoverController.getPanel(), GAME_OVER_KEY);
+        mainFrameController.addPanel(highScoreController.getPanel(), HIGH_SCORE_KEY);
 
         functionController.setGameControllerReference(gameController);
         gameoverController.setGameControllerReference(gameController);
     }
 
-    //method: setupAndStart
-    //purpose: call setup method, switch to first application screen (splash)
-    //then set the whole thing visible
-    private void setupAndStart(){
+    // method: setupAndStart
+    // purpose: call setup method, switch to first application screen (splash)
+    // then set the whole thing visible
+    private void setupAndStart() {
         javax.swing.SwingUtilities.invokeLater(() -> {
             setup();
             mainFrameController.changeVisibleCard(SPLASH_KEY);

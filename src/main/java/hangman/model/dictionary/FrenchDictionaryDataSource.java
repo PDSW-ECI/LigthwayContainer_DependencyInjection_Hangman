@@ -9,17 +9,16 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
  * @author 2106913
  */
 public class FrenchDictionaryDataSource extends HangmanDictionary {
 
     static private String words[] = {
-        "TOUS",
-        "AVOIR",
-        "APRÈS",
-        "TRÈS",
-        "VOILÀ"
+            "TOUS",
+            "AVOIR",
+            "APRÈS",
+            "TRÈS",
+            "VOILÀ"
     };
 
     public FrenchDictionaryDataSource() {
