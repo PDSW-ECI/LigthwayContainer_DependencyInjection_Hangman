@@ -1,4 +1,4 @@
-package hangman.model
+package hangman.model;
 public class OriginalScore implements GameScore {
     @Override
     public int calculateScore(int correctCount, int incorrectCount) throws IllegalArgumentException {
