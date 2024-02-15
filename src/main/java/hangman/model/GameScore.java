@@ -1,3 +1,4 @@
+package hangman.model
 public interface GameScore {
     /**
      * Calcula el puntaje del juego según las reglas específicas de cada implementación.
