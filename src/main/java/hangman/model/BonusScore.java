@@ -1,11 +1,16 @@
 package hangman.model;
 public class BonusScore implements GameScore {
+    private int score = 0;
+    private int failure= 5;
+    private int bonus=10;
+    private int minScore= 0;
     @Override
-    public int calculateScore(int correctCount, int incorrectCount) throws IllegalArgumentException {
-        if (correctCount < 0 || incorrectCount < 0) {
-            throw new IllegalArgumentException("Los contadores de letras correctas e incorrectas no pueden ser negativos");
+    public int calculateScore(int correctCount, int incorrectCount) throws GameScoreException {
+        score = 0;
+        if( correctCount < 0 || incorrectCount <0 ) {
+            throw new GameScoreException(GameScoreException.NEGATIVE_NUMBERS);
         }
-        int score = correctCount * 10 - (incorrectCount * 5);
-        return Math.max(score, 0);
+        score =( score+(correctCount*bonus) - (failure*incorrectCount) < minScore )? minScore :  score+(correctCount*bonus) - (failure*incorrectCount);
+        return score; 
     }
 }
