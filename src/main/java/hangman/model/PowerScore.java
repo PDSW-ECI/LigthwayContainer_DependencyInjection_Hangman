@@ -1,4 +1,4 @@
-public class PowerBonusScore implements GameScore {
+public class PowerScore implements GameScore {
     @Override
     public int calculateScore(int correctCount, int incorrectCount) throws IllegalArgumentException {
         if (correctCount < 0 || incorrectCount < 0) {
