@@ -40,7 +40,7 @@
          <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
-             <!-- {version} can be 6.0.0, 7.0.0, etc. -->  <version>{version}</version>
+            <version>{7.0.0}</version>
        </dependency>
     </dependencies>
 </project>
