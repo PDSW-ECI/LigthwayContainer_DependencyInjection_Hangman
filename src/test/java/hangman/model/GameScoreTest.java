@@ -1,4 +1,4 @@
-ackage hangman.model;
+package hangman.model;
  
 import org.junit.Test;
 import hangman.model.*;
