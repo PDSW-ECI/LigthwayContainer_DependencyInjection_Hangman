@@ -8,5 +8,5 @@ public interface GameScore {
      * @return El puntaje calculado según las reglas del juego.
      * @pre correctCount >= 0 && incorrectCount >= 0
      */
-    int calculateScore(int correctCount, int incorrectCount) throws IllegalArgumentException;
+    int calculateScore(int correctCount, int incorrectCount) throws GameScoreException;
 }
