@@ -26,14 +26,13 @@
  */
 package hangman;
 
-
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import hangman.setup.factoryMethod.HangmanDefaultFactoryMethod;
 import hangman.setup.guice.HangmanFactoryServices;
 
 public class SwingProject {
-
+    // Arreglo de colaboradores del proyecto
     public static final String CONTRIBUTORS[] = {
             "Omar Rodriguez, 008796203",
             "Nahid Enayatzadeh, 010164622",
@@ -41,21 +40,23 @@ public class SwingProject {
             "Christopher Santos, ",
             "Jazmin Guerrero, 009007193"};
 
+    //Nombre del proyecto
     public static final String PROJECT_NAME = "CS 245 - Swing Project v1";
 
+    //Crear una instancia de GUI utilizando el método de fábrica predeterminado
     public static GUI createGUIUsingFactoryMethod() {
         return new GUI(new HangmanDefaultFactoryMethod());
     }
 
+    //Crear una instancia de GUI utilizando Guice
     public static GUI createGUIUsingGuice() {
         Injector injector = Guice.createInjector(new HangmanFactoryServices());
         return injector.getInstance(GUI.class);
     }
 
-    //method: main
-    //purpose: the entry-point to our application
+    //Punto de entrada de nuestra aplicación
     public static void main(String[] args) {
-        createGUIUsingFactoryMethod().play();
+        createGUIUsingGuice().play();
     }
-
 }
+
